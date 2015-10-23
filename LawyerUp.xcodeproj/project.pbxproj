@@ -10,6 +10,8 @@
 		DA48677C1BD9C03A00495108 /* Lawyer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4867781BD9C03A00495108 /* Lawyer.m */; settings = {ASSET_TAGS = (); }; };
 		DA48677D1BD9C03A00495108 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4867791BD9C03A00495108 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		DA48677E1BD9C03A00495108 /* Practice.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48677B1BD9C03A00495108 /* Practice.m */; settings = {ASSET_TAGS = (); }; };
+		DA4867811BD9C10600495108 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4867801BD9C10600495108 /* Client.m */; settings = {ASSET_TAGS = (); }; };
+		DA4867841BD9C26B00495108 /* Associate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4867831BD9C26B00495108 /* Associate.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		DA4867791BD9C03A00495108 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA48677A1BD9C03A00495108 /* Practice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Practice.h; sourceTree = "<group>"; };
 		DA48677B1BD9C03A00495108 /* Practice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Practice.m; sourceTree = "<group>"; };
+		DA48677F1BD9C10600495108 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../Client.h; sourceTree = "<group>"; };
+		DA4867801BD9C10600495108 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = ../Client.m; sourceTree = "<group>"; };
+		DA4867821BD9C26B00495108 /* Associate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Associate.h; sourceTree = "<group>"; };
+		DA4867831BD9C26B00495108 /* Associate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Associate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +69,15 @@
 		DA4867671BD9BFCB00495108 /* LawyerUp */ = {
 			isa = PBXGroup;
 			children = (
+				DA4867791BD9C03A00495108 /* main.m */,
+				DA48677F1BD9C10600495108 /* Client.h */,
+				DA4867801BD9C10600495108 /* Client.m */,
 				DA4867771BD9C03A00495108 /* Lawyer.h */,
 				DA4867781BD9C03A00495108 /* Lawyer.m */,
-				DA4867791BD9C03A00495108 /* main.m */,
 				DA48677A1BD9C03A00495108 /* Practice.h */,
 				DA48677B1BD9C03A00495108 /* Practice.m */,
+				DA4867821BD9C26B00495108 /* Associate.h */,
+				DA4867831BD9C26B00495108 /* Associate.m */,
 			);
 			path = LawyerUp;
 			sourceTree = "<group>";
@@ -130,6 +140,8 @@
 			files = (
 				DA48677E1BD9C03A00495108 /* Practice.m in Sources */,
 				DA48677D1BD9C03A00495108 /* main.m in Sources */,
+				DA4867811BD9C10600495108 /* Client.m in Sources */,
+				DA4867841BD9C26B00495108 /* Associate.m in Sources */,
 				DA48677C1BD9C03A00495108 /* Lawyer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

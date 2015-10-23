@@ -8,18 +8,34 @@
 
 #import "Lawyer.h"
 
-@implementation Layer
+@implementation Lawyer
 
 
-- (instancetype)initWithName: (NSString *)name rate:(NSNumber *)rate {
+- (instancetype)initWithName: (NSString *)name practice:(Practice *)practice practiceType:(SpecialtyLaw)practiceType {
     self = [super init];
     if (self) {
         _name = name;
-        _rate = rate;
-        
+        _practice =practice;
+        _practice = [[Practice alloc] initWithRate:practiceType];
+        _rate = _practice.rate;
+
         
     }
     return self;
 }
+
+-(void)addClient:(Client *)client {
+
+    [self.delegate addClientToClientList:client forLawyer:self];
+}
+
+
+-(int)getPayableAmountForClient:(Client *)client {
+
+    return [self.delegate payableAmountForClient:client forLawyer:self];
+    
+}
+
+
 
 @end

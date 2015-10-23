@@ -11,16 +11,18 @@
 @interface Practice : NSObject
 
 typedef NS_ENUM (NSInteger , SpecialtyLaw) {
-    FamilyLaw,
-    PatentLaw,
-    CriminalLaw,
-    CorporateLaw,
-    
+    Family,
+    Patent,
+    Criminal,
+    Corporate,
 };
-
 
 @property (nonatomic, strong) NSDictionary *rateSheet;
 @property (nonatomic, strong) NSString *lawyers;
 @property (nonatomic) SpecialtyLaw speciality;
+@property (nonatomic, strong) NSNumber *rate;
+
+
+- (instancetype)initWithRate: (SpecialtyLaw)rate;
 
 @end

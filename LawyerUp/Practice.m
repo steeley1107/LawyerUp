@@ -10,16 +10,32 @@
 
 @implementation Practice
 
-- (instancetype)init
+- (instancetype)initWithRate: (SpecialtyLaw)rate
 {
     self = [super init];
     if (self) {
         self.rateSheet = @{
-                           @"Family Law": @200.00,
-                           @"Patent Law": @380.50,
-                           @"Criminal Law": @409.99,
-                           @"Corporate Law": @400.00,
+                           [NSNumber numberWithInt:Family]: @200.00,
+                           [NSNumber numberWithInt:Patent]: @380.50,
+                           [NSNumber numberWithInt:Criminal]: @409.99,
+                           [NSNumber numberWithInt:Corporate]: @400.00,
                            };
+        
+        if ([self.rateSheet objectForKey:[NSNumber numberWithInt:Family]]) {
+            self.rate = [self.rateSheet objectForKey:[NSNumber numberWithInt:Family]];
+        }
+        else if ([self.rateSheet objectForKey:[NSNumber numberWithInt:Patent]]) {
+            self.rate = [self.rateSheet objectForKey:[NSNumber numberWithInt:Patent]];
+            
+        }
+        else if ([self.rateSheet objectForKey:[NSNumber numberWithInt:Criminal]]) {
+            self.rate = [self.rateSheet objectForKey:[NSNumber numberWithInt:Criminal]];
+        }
+        else if ([self.rateSheet objectForKey:[NSNumber numberWithInt:Corporate]]) {
+            self.rate = [self.rateSheet objectForKey:[NSNumber numberWithInt:Corporate]];
+        }
+
+
         
         
     }
