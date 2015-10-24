@@ -21,20 +21,19 @@
 - (int)payableAmountForClient:(Client *)client forLawyer:(Lawyer *)lawyer {
     
     int hours;
-
-    if ([client.debugDescription length] > 10) {
-        hours = 5;
-    }
-    else if ([client.debugDescription length] > 10 && [client.debugDescription length] < 20) {
-        hours = 10;
-    }
-    else if ([client.debugDescription length] <= 20) {
-        hours = 25;
-    }
-
-    int cost = (int)lawyer.rate * hours;
     
-    return cost;
+    if ([client.problem length] < 10) {
+        hours = 5;
+        return hours * [lawyer.rate doubleValue];
+    }
+    else if ([client.problem length] >= 10 && [client.debugDescription length] <= 20) {
+        hours = 10;
+        return hours * [lawyer.rate doubleValue];
+    }
+    else  {
+        hours = 25;
+        return hours * [lawyer.rate doubleValue];
+    }
 }
 
 @end

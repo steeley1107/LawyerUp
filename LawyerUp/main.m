@@ -29,7 +29,7 @@ int main(int argc, const char * argv[]) {
         lawyer1.delegate = associate1;
         lawyer2.delegate = associate2;
         
-        Client *client1 = [[Client alloc] initWithName:@"ClientOne" problem:@"killed my wife" practiceType:Family];
+        Client *client1 = [[Client alloc] initWithName:@"ClientOne" problem:@"married" practiceType:Family];
         
         Client *client2 = [[Client alloc] initWithName:@"ClientTwo" problem:@"killed my wife" practiceType:Family];
         
